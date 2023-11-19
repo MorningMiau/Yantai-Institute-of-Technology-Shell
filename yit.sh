@@ -17,7 +17,7 @@ while true
 do
     clear
     echo "烟台理工学院 Ubuntu/Debian 一键脚本"
-    echo "Version 0.4 Beta"
+    echo "Version 0.5 Beta"
     figlet "YIT"
     echo "首次运行脚本后仅需输入 yit 即可再次启动脚本"
     echo "---------------------------------------------------------------"
