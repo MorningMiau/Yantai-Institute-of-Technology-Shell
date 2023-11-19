@@ -24,6 +24,7 @@ do
     echo "1、一键安装 Acme 证书认证"
     echo "2、安装&升级X-UI面板"
     echo "3、安装科技Lion一键脚本"
+    echo "4、一键配置 Hexo"
     echo "---------------------------------------------------------------"
     echo "0、退出脚本"
     echo "---------------------------------------------------------------"
@@ -45,6 +46,32 @@ do
             ;;
         3)
             curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh && chmod +x kejilion.sh && ./kejilion.sh
+            ;;
+        4)
+            # 检查nodejs版本
+            version=$(node -v)
+            major_version=${version:1:2}
+            if (( $major_version < 16 ))
+            then
+                # 检查是否已经安装了nvm
+                if ! command -v nvm &> /dev/null
+                then
+                    echo "nvm 未安装，正在自动安装..."
+                    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+                    source ~/.bashrc
+                fi
+                echo "正在使用nvm安装nodejs16及npm..."
+                nvm install 16
+                nvm use 16
+            fi
+            echo "正在安装git..."
+            sudo apt-get install git-core
+            echo "正在配置Hexo..."
+            cd /home
+            mkdir hexo
+            cd /home/hexo
+            npm install -g hexo-cli
+            npx hexo init
             ;;
         0)
             exit 0
