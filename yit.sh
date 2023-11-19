@@ -17,7 +17,7 @@ while true
 do
     clear
     echo "烟台理工学院 Ubuntu/Debian 一键脚本"
-    echo "Version 0.3 Beta"
+    echo "Version 0.4 Beta"
     figlet "YIT"
     echo "首次运行脚本后仅需输入 yit 即可再次启动脚本"
     echo "---------------------------------------------------------------"
@@ -25,6 +25,7 @@ do
     echo "2、安装&升级X-UI面板"
     echo "3、安装科技Lion一键脚本"
     echo "4、一键配置 Hexo"
+    echo "5、DNS工具 ▶"
     echo "---------------------------------------------------------------"
     echo "0、退出脚本"
     echo "---------------------------------------------------------------"
@@ -73,11 +74,15 @@ do
             npm install -g hexo-cli
             npx hexo init
             ;;
+        5)
+            chmod +x dns.sh
+            ./dns.sh
+            ;;
         0)
             exit 0
             ;;
         *)
-            echo "请输入正确的数字！"
+            echo "请输入正确选项"
             sleep 2
             ;;
     esac
