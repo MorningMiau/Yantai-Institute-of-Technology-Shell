@@ -34,13 +34,13 @@ do
     case $num in
         1)
             sudo apt update
-            read -p "Press enter to continue"
+            read -p "按任意键继续……"
             sudo apt install curl
-            read -p "Press enter to continue"
+            read -p "按任意键继续……"
             apt-get install cron
-            read -p "Press enter to continue"
+            read -p "按任意键继续……"
             curl https://get.acme.sh | sh
-            read -p "Press enter to continue"
+            read -p "按任意键继续……"
             ;;
         2)
             bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
