@@ -75,8 +75,7 @@ do
             npx hexo init
             ;;
         5)
-            chmod +x dns.sh
-            ./dns.sh
+            curl -sS -O https://raw.githubusercontent.com/MorningMiau/Yantai-Institute-of-Technology-Shell/main/dns.sh && chmod +x dns.sh && ./dns.sh
             ;;
         0)
             exit 0
