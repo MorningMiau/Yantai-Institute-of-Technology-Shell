@@ -20,7 +20,7 @@ do
         1)
             # 查询本机DNS
             cat /etc/resolv.conf
-            read -p "Press enter to continue"
+            read -p "按任意键继续……"
             ;;
         2)
             # 修改本机DNS
