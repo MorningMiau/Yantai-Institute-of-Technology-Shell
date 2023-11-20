@@ -17,15 +17,16 @@ while true
 do
     clear
     echo "烟台理工学院 Ubuntu/Debian 一键脚本"
-    echo "Version 0.5 Beta"
+    echo "Version 0.6 Beta"
     figlet "YIT"
     echo "首次运行脚本后仅需输入 yit 即可再次启动脚本"
     echo "---------------------------------------------------------------"
-    echo "1、一键安装 Acme 证书认证"
+    echo "1、安装 Acme 证书认证"
     echo "2、安装&升级X-UI面板"
     echo "3、安装科技Lion一键脚本"
-    echo "4、一键配置 Hexo"
+    echo "4、配置 Hexo"
     echo "5、DNS工具 ▶"
+    echo "6、backtrace IP 回程测试"
     echo "---------------------------------------------------------------"
     echo "0、退出脚本"
     echo "---------------------------------------------------------------"
@@ -76,6 +77,9 @@ do
             ;;
         5)
             curl -sS -O https://raw.githubusercontent.com/MorningMiau/Yantai-Institute-of-Technology-Shell/main/dns.sh && chmod +x dns.sh && ./dns.sh
+            ;;
+        6)
+            curl https://raw.githubusercontent.com/zhanghanyun/backtrace/main/install.sh -sSf | sh
             ;;
         0)
             exit 0
