@@ -80,6 +80,7 @@ do
             ;;
         6)
             curl https://raw.githubusercontent.com/zhanghanyun/backtrace/main/install.sh -sSf | sh
+            read -p "按任意键继续……"
             ;;
         0)
             exit 0
